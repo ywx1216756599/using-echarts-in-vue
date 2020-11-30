@@ -1,0 +1,8 @@
+.no-data {
+  position: absolute;
+  background-color: #fff;
+  z-index: 999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

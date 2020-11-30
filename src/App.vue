@@ -1,32 +1,45 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view/>
+    <x-line
+      :settings="{
+        theme: 'dark',
+        legendName: {
+          gas: '气',
+        },
+        smooth: [true, 0.1, true],
+        stack: { 合并: ['气', 'hot'] },
+        label: { show: true, position: 'top' },
+        switchAxis: { axis: 'xAxis' },
+        myAxis: {
+          axisSite: { right: ['small'] },
+          axisType: ['normal', '%'],
+          axisName: ['值','比率']
+        },
+      }"
+      :chartData="{
+        columns: ['time', 'gas', 'hot', 'small'],
+        rows: [
+          { time: '1-1', gas: 120, hot: 130, small: '0.8' },
+          { time: '1-2', gas: 220, hot: 230, small: '0.8' },
+          { time: '1-3', gas: 200, hot: 150, small: '0.8' },
+          { time: '1-4', gas: 150, hot: 180, small: '0.8' },
+          { time: '1-5', gas: 180, hot: 220, small: '0.8' },
+          { time: '1-6', gas: 160, hot: 330, small: '0.8' },
+          { time: '1-7', gas: 200, hot: 250, small: '0.8' },
+          { time: '1-8', gas: 220, hot: 130, small: '0.8' },
+        ],
+      }"
+    ></x-line>
+    <router-view />
   </div>
 </template>
+<script>
+export default {
+  name: 'App',
+  created() {
 
-<style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
-
-#nav {
-  padding: 30px;
-
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-
-    &.router-link-exact-active {
-      color: #42b983;
-    }
   }
 }
+</script>
+<style lang="scss">
 </style>

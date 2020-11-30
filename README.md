@@ -13,7 +13,7 @@
 #### x-bar
 
 | 属性名 | 类型 | 用法  | 说明 | 特殊说明 |
-| :--- | :---: | :--: | :--: | ------: |
+| :---: | :---: | :--: | :--: | :------: |
 | theme | String | 'drak' | 主题 | theme文件夹下有主题内容 |
 | legendName | Object | {oldName: newName}|修改别名| - |
 | smooth | Array或Boolean或Number | smooth:true | 设置弯曲值(范围:0-1) true为0.5 |类型是Array时 是给对应序号的折线图设置弯曲值 |

@@ -1,12 +1,14 @@
 // 导入单个组件
 import EchartsLine from './Line/index'
 import EchartsBar from './Bar/index'
+import EchartsPie from './Pie/index'
 
 
 // 以数组的结构保存组件，便于遍历
 const components = [
     EchartsLine,
-    EchartsBar
+    EchartsBar,
+    EchartsPie
 ]
 
 // 定义 install 方法

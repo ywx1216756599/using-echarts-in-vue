@@ -15,11 +15,17 @@
 1.在main.js中引入
 
 ```
+//导入echarts
 import echarts from 'echarts'
+//导入主题部分(路径自拟)
 import Func from '@/views/theme/index'
+//导入封装的Xcharts部分(路径自拟)
 import Xcharts from '@/views/index'
+//导入Xcharts的css文件(路径自拟)
 import '@/views/css/index.css'
+//使用Xcharts
 Vue.use(Xcharts)
+//设置主题
 Func(echarts)
 ```
 2. 使用对应的模块 (柱状图为例)
@@ -93,4 +99,16 @@ export default {
 | axisSite | Object | { right: ['fire'] } | 设置双 y 轴 | - |
 | axisType | Array | ['normal', '%'] | 设置数据的属性,normal：默认,K：千,%：百分比 | - |
 | axisName | Array | ['值', '比率'] | 设置 y 轴的名称 | - |
+
+#### x-pie
+| 属性名 | 类型 | 用法  | 说明 | 特殊说明 |
+| :---: | :---: | :--: | :--: | :------: |
+| theme | String | 'drak' | 主题 | theme文件夹下有主题内容 |-|
+| name | String | 'name' | 设置圆环图的名称 |-|
+| selected | String,Boolean | 'single' | 选中模式(默认为false,其他值:true,'single','multiple') |-|
+| radius | String,Array | '50%' | 设置半径(数组情况下可以设置圆环图) |设置为数组可以显示圆环图|
+| center | Array | [ '50%','50%' ] | 设置图形位置(相对于x,y轴的位置) |-|
+| roseType | String,Boolean | 'radius' | 是否展示成南丁格尔图(默认是false,其他值'radius','area') |
+| more | Array | [ [ '1-1','1-2' ] , [ '1-1','1-2','1-3' ] ] | 多圆饼图时设置 |设置raius会改变状态，若需要，设置[[],[],[]]类型|
+
 

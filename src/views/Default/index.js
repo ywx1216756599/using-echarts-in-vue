@@ -100,8 +100,6 @@ export default class defaultConfig {
     }
     this.label = {
       show: true,
-      formatter: '{c}',
-      position: 'top',
       fontSize: 12
     }
   }

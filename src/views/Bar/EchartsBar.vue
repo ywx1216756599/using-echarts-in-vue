@@ -33,9 +33,7 @@ export default {
       //设置画图对象
       this.myChart = echarts.init(this.$refs.bar, theme)
       //设置OptionBar对象
-      console.log(this.settings)
       const bar = new OptionBar(this.chartData, this.settings, this.extend, this.series)
-
       //开始画图
       this.myChart.setOption(bar.option)
     },

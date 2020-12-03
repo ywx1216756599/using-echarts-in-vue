@@ -88,6 +88,7 @@ export default {
 | axisName | Array | ['值', '比率'] | 设置 y 轴的名称 | - |
 
 #### x-bar
+
 | 属性名 | 类型 | 用法  | 说明 | 特殊说明 |
 | :---: | :---: | :--: | :--: | :------: |
 | theme | String | 'drak' | 主题 | theme文件夹下有主题内容 |
@@ -101,6 +102,7 @@ export default {
 | axisName | Array | ['值', '比率'] | 设置 y 轴的名称 | - |
 
 #### x-pie
+
 | 属性名 | 类型 | 用法  | 说明 | 特殊说明 |
 | :---: | :---: | :--: | :--: | :------: |
 | theme | String | 'drak' | 主题 | theme文件夹下有主题内容 |-|
@@ -109,6 +111,22 @@ export default {
 | radius | String,Array | '50%' | 设置半径(数组情况下可以设置圆环图) |设置为数组可以显示圆环图|
 | center | Array | [ '50%','50%' ] | 设置图形位置(相对于x,y轴的位置) |-|
 | roseType | String,Boolean | 'radius' | 是否展示成南丁格尔图(默认是false,其他值'radius','area') |
-| more | Array | [ [ '1-1','1-2' ] , [ '1-1','1-2','1-3' ] ] | 多圆饼图时设置 |设置raius会改变状态，若需要，设置[[],[],[]]类型|
+| more | Array | [ [ '1-1','1-2' ] , [ '1-1','1-2','1-3' ] ] | 多圆饼图时设置 |设置radius会改变状态，若需要，设置[[],[],[]]类型|
+
+#### x-scatter
+| 属性名 | 类型 | 用法  | 说明 | 特殊说明 |
+| :---: | :---: | :--: | :--: | :------: |
+| theme | String | 'drak' | 主题 | theme文件夹下有主题内容 |-|
+| legendName | Object | {oldName: newName}|修改别名| - |
+| symbolSize | Number | symbolSize: 22 | 设置散点图显示图案的大小| - |
+| symbol | String,Array | symbol:'arrow' | 设置散点图显示图案的样式| 'circle', 'rect', 'roundRect', 'triangle', 'diamond', 'pin', 'arrow', 'none' |
+| tooltipTrigger | string | tooltipTrigger:'item' | 设置散点图tooltip.trigger样式| 'item','axis','none' |
+| axisVisible | boolean | axisVisible:false | 隐藏xy轴 | - |
+| xAxisName | string | xAxisName:'这是x轴' | 设置x轴名称 | - |
+| yAxisName | string | yAxisName:'这是y轴' | 设置y轴名称 | - |
+| xAxisType | string | xAxisType: value | 设置x轴属性 | - |
+| label | object |{show: true,position: top} | 设置显示标签 | - |
+
+
 
 
